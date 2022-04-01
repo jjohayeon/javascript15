@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    main {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .circleContainer {
+        display: flex;
+        gap: 20px;
+    }
+
+    .circle {
+        width: 100px;
+        height: 100px;
+        border: 3px solid #000;
+        border-radius: 50%;
+    }
+
+    button {
+        margin-top: 100px;
+        display: block;
+        padding: 10px 10px;
+        cursor: pointer;
+    }
+
+    .circle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    span {
+        display: block;
+        text-align: center;
+        font-weight: bold;
+        font-size: 3rem;
+    }
+</style>
+
+<body>
+    <main>
+        <div class="circleContainer">
+            <div class="circle">
+                <span class="number">0</span>
+            </div>
+            <div class="circle">
+                <span class="number">0</span>
+            </div>
+            <div class="circle">
+                <span class="number">0</span>
+            </div>
+            <div class="circle">
+                <span class="number">0</span>
+            </div>
+            <div class="circle">
+                <span class="number">0</span>
+            </div>
+            <div class="circle">
+                <span class="number">0</span>
+            </div>
+        </div>
+        <button class="btn">Button</button>
+    </main>
+
+    <script>
+        var startnumber = 1;
+        var lastnumber = 45;
+        var grid = Array(startnumber * lastnumber).fill().map((arr, i) => {
+            return i
+        }) //배열에 1~45까지 숫자 넣기
+        var number = document.querySelectorAll('.number')
+        //querySelectorAll은 반환객체가 nodeList이기 때문에 for문 또는 forEach문 사용
+        var btn = document.querySelector('.btn');
+
+        btn.addEventListener('click', function () {
+            let lottoNumber = [];
+            for (let i = 0; i < number.length; i++) {
+                let numberNumber = number.item(i).innerHTML;
+                numberNumber = random();
+                lottoNumber.push(numberNumber);
+            }
+            console.log(lottoNumber)
+        })
+
+
+        //랜덤 숫자 반환 함수
+        function random() {
+            return Math.floor(Math.random() * grid.length);
+        }
+
+    </script>
+</body>
+
+</html>

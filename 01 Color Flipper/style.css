@@ -1,0 +1,83 @@
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  line-height: 1.5;
+  font-size: 1rem;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4 {
+  text-transform: capitalize;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+}
+
+nav {
+  background: white;
+  height: 3rem;
+  display: grid;
+  align-items: center;
+}
+
+.nav-center {
+  width: 90vw;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-links {
+  display: flex;
+}
+nav a {
+  text-transform: capitalize;
+  letter-spacing: 0.1rem;
+}
+nav a:hover {
+  color: hsl(205, 78%, 60%);
+}
+
+main {
+  min-height: calc(100vh-3rem);
+  display: grid;
+  place-items: center;
+}
+.container {
+  text-align: center;
+}
+.container h2 {
+  background: #000;
+  color: white;
+  padding: 1rem;
+  border-radius: 0.25rem;
+  margin-bottom: 2.5rem;
+}
+.color {
+  color: hsl(205, 78%, 60%);
+}
+.btn-hero {
+  text-transform: uppercase;
+  background: transparent;
+  color: #000;
+  letter-spacing: 0.1rem;
+  display: inline-block;
+  border: 2px solid #000;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 0.75rem 1.25rem;
+}
+.btn-hero:hover {
+  color: #fff;
+  background: #000;
+}
